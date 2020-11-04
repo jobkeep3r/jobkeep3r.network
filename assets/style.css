@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto:wght@300;400&display=swap");
+:root {
+  --bg-shade-one: #00d1ccff;
+  --bg-shade-two: #aa78a6ff;
+  --bg-shade-three: #2e6fd1ff;
+  --text-black: #333;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", "Open Sans", sans-serif;
+  line-height: 1.5;
+  color: var(--text-black);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+a:hover {
+  border-bottom: 2px solid var(--bg-shade-one);
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+p {
+  margin: 10px 0;
+}
+.nav {
+  display: flex;
+  height: 80px;
+  border-bottom: 2px double var(--bg-shade-one);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-nav {
+  display: flex;
+  height: 120px;
+  border-top: 2px double var(--bg-shade-one);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+}
+
+.icon-color {
+  color: var(--bg-shade-one);
+}
+
+.logo {
+  padding: 10px 0;
+  margin: 10px 0 0 20px;
+  color: var(--text-black);
+  font-weight: bold;
+}
+
+.logo-text {
+  color: var(--bg-shade-one);
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav ul li {
+  padding: 10px;
+  margin: 10px 20px;
+}
+
+.nav ul li a {
+  font-weight: 700;
+  padding: 0 2px 5px 2px;
+}
+
+.nav ul li a:hover {
+  border-bottom: 2px double var(--bg-shade-one);
+}
+.nav .wallet-btn {
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 10px;
+  border: 2px solid var(--bg-shade-two);
+  border-radius: 25px;
+}
+.nav .wallet-btn:hover {
+  /* color: var(--bg-shade-one); */
+  border: 2px solid var(--bg-shade-one);
+}
+
+.row-container {
+  display: flex;
+}
+.row-center {
+  align-items: center;
+  justify-content: center;
+}
+.col-container {
+  display: flex;
+  flex-direction: column;
+}
+.header .warning-msg {
+  margin: 20px;
+  padding: 5px 12px;
+  border: 2px solid var(--bg-shade-two);
+  border-radius: 20px;
+}
+
+.docs {
+  padding: 10px 0;
+  margin: 10px 0 10px 35px;
+  /* font-weight: bold; */
+}
+.community {
+  display: flex;
+}
+.community a {
+  padding: 0 5px 0 5px;
+  margin: 0 10px 0 10px;
+  border-bottom: 2px double #ffffff00;
+}
+
+.community a:hover {
+  border-bottom: 2px solid var(--bg-shade-one);
+}

@@ -99,14 +99,14 @@ p {
 .nav ul li a:hover {
   border-bottom: 2px double var(--bg-shade-one);
 }
-.nav .wallet-btn {
+.wallet-btn {
   cursor: pointer;
   padding: 10px 20px;
   margin: 10px;
   border: 2px solid var(--bg-shade-two);
   border-radius: 25px;
 }
-.nav .wallet-btn:hover {
+.wallet-btn:hover {
   /* color: var(--bg-shade-one); */
   border: 2px solid var(--bg-shade-one);
 }
@@ -117,6 +117,7 @@ p {
 .row-center {
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 .col-container {
   display: flex;

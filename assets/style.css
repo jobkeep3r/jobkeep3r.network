@@ -70,6 +70,12 @@ p {
 .icon-color {
   color: var(--bg-shade-one);
 }
+.icon-color-two {
+  color: var(--bg-shade-two);
+}
+.icon-color-three {
+  color: var(--bg-shade-three);
+}
 
 .logo {
   padding: 10px 0;
@@ -99,6 +105,9 @@ p {
 .nav ul li a:hover {
   border-bottom: 2px double var(--bg-shade-one);
 }
+.wallet-btn-connected {
+  font-weight: 700 !important;
+}
 .wallet-btn {
   cursor: pointer;
   padding: 10px 20px;
@@ -109,6 +118,37 @@ p {
 .wallet-btn:hover {
   /* color: var(--bg-shade-one); */
   border: 2px solid var(--bg-shade-one);
+}
+.wallet-btn-connected {
+  display: none;
+}
+.wallet-btn-connected {
+  padding: 10px 20px;
+  margin: 10px;
+  border: 2px solid var(--bg-shade-three);
+  border-radius: 25px;
+}
+.wallet-btn-connected .row-container {
+  align-items: center;
+  justify-content: space-between;
+  min-width: 400px;
+}
+.wallet-action {
+  display: flex;
+}
+.wallet-btn-connected .row-container .wallet-action > * {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  padding: 5px 10px;
+}
+.wallet-btn-connected .row-container .wallet-action a:hover,
+.copyAddress:hover {
+  background-color: #3333330f;
+  border: none;
+}
+.copyAddress {
+  cursor: pointer;
 }
 
 .row-container {

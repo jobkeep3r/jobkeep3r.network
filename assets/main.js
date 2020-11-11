@@ -2,6 +2,10 @@ $(async () => {
   $(".wallet-btn-connected").hide();
 });
 
+$(".isbondenable").css("display", "none");
+$(".isbonddisable").css("display", "flex");
+$(".input-value-bond").val("");
+
 $("#wallet-btn").click(appReload);
 
 $(".copyAddress").click(copyAddress);

@@ -27,8 +27,6 @@ A Keeper is the term used to refer to an external person and/or team that execut
 
 A simple and easy to understand project to participate in the growth of blockchain sector especially Defi sector.
 
-Closing
-
 More information about the jobkeep3r will be out soon. Keep an eye on this space to be updated.
 
 Social media:

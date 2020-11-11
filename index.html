@@ -34,7 +34,7 @@
       integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./assets/style.css?v=1.03" />
+    <link rel="stylesheet" href="./assets/style.css?v=1.04" />
   </head>
   <body>
     <header class="header">
@@ -48,11 +48,9 @@
         <ul>
           <li><a href="./">jobkeep3r</a></li>
           <li><a href="./">governance</a></li>
-          <li><a href="./">presale</a></li>
+          <li><a href="./">liquidity</a></li>
         </ul>
       </div>
-      <br />
-      <br />
       <div class="row-container row-center">
         <!-- to connect wallet -->
         <div class="wallet-btn" id="wallet-btn">Connect Wallet</div>
@@ -64,25 +62,33 @@
               <i class="fas fa-circle icon-color-two">&nbsp;</i>
               Disconnected
             </div>
-            <div class="wallet-balance">254.21 JK4R</div>
+            <div class="wallet-balance"></div>
           </div>
-          <br />
+          <!-- <br /> -->
           <div class="row-container">
-            <div class="wallet-address" id="currentAccount">N/A</div>
+            <div class="row-container row-left">
+              <img src="./assets/ethereumLogo.svg" alt="Eth" />
+              <div class="col-container">
+                <div class="ethereum-text">Ethereum</div>
+                <div class="wallet-address" id="currentAccountClass">N/A</div>
+              </div>
+            </div>
 
             <div class="wallet-action">
               <div class="copyAddress">
                 <i class="fas fa-copy fa-2x icon-color"> &nbsp;</i>Copy
               </div>
+
               <a
-                href="http://etherscan.io"
+                class="VeiwLink"
+                href="http://etherscan.io/address/${currentAccount}"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i class="fas fa-external-link-alt fa-2x icon-color-two">
                   &nbsp;</i
-                >View
-              </a>
+                >View</a
+              >
             </div>
           </div>
         </div>
@@ -91,22 +97,145 @@
         </div> -->
       </div>
     </header>
+    <main>
+      <br />
+      <div class="row-container row-space-around-align-top">
+        <div class="row-container row-space-around-align-top">
+          <div class="row-container row-center-no-margin keeper-panel bd-one">
+            <div class="container-margin">
+              <!-- <div class="col-container row-center"> -->
+              <div class="heading">Profile</div>
+              <div class="col-container profile-panel">
+                <div class="row-container row-space-between">
+                  <div class="left-text">Balance:</div>
+                  <div class="right-text wallet-balance">0 JKP3R</div>
+                </div>
+                <div class="row-container row-space-between">
+                  <div class="left-text">Bond:</div>
+                  <div class="right-text">0 JKP3R</div>
+                </div>
+                <div class="row-container row-space-between isbonddisable">
+                  <div class="right-text btn bondEnable">Bond</div>
+                  <div class="right-text btn unbondEnable">Unbond</div>
+                </div>
+              </div>
 
+              <div class="row-container presaleBuyInputContainer isbondenable">
+                <div>
+                  <div class="presaleBuyInputName">
+                    <div class="bondtype">Bond:</div>
+                  </div>
+                  <input
+                    inputmode="decimal"
+                    autocomplete="off"
+                    autocorrect="off"
+                    type="number"
+                    pattern="^[0-9]*[.,]?[0-9]*$"
+                    minlength="1"
+                    min="0"
+                    spellcheck="false"
+                    id="bond_JKP3R_value"
+                    class="input-value-bond"
+                    placeholder="Amount in JKP3R"
+                  />
+                </div>
+                <div class="presaleBuyInputlogo">
+                  <img
+                    src="./assets/favicon.png"
+                    alt="JKP3R"
+                    height="40"
+                    width="40"
+                  />
+                </div>
+              </div>
+              <div class="row-container row-space-between isbondenable">
+                <div class="input-submit-cancel btn right-text">Cancel</div>
+                <div class="input-submit-bond btn right-text">Submit</div>
+              </div>
+              <div class="row-container row-space-between">
+                <div class="left-text">Work Completed:</div>
+                <div class="right-text">0</div>
+              </div>
+              <!-- </div> -->
+            </div>
+          </div>
+          <div class="row-container row-center-no-margin job-panel bd-one">
+            <div class="col-container row-center">
+              <div class="heading">Jobs</div>
+              <div class="row-container jobs-panel">
+                <div class="left-text">There are no jobs</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row-container row-center-no-margin presale-panel bd-one">
+          <div class="container-margin">
+            <div class="heading">Liquidity</div>
+            <div class="row-container row-space-between">
+              <div class="left-text">Target:</div>
+              <div class="right-text PresaleTarget">Community Decision</div>
+            </div>
+            <div class="row-container row-space-between">
+              <div class="left-text">Price:</div>
+              <div class="right-text PresaleTokenRate">Community Decision</div>
+            </div>
+            <div class="row-container row-space-between">
+              <div class="left-text">Tokens For Sale:</div>
+              <div class="right-text TokenForSale">Community Decision</div>
+            </div>
+            <div class="row-container row-space-between">
+              <div class="left-text">Remaining Token:</div>
+              <div class="right-text RemainingToken">N/A</div>
+            </div>
+
+            <div class="row-container presaleBuyInputContainer">
+              <div>
+                <div class="presaleBuyInputName">
+                  <div>Your Liquidity Contribution:</div>
+                </div>
+                <input
+                  inputmode="decimal"
+                  autocomplete="off"
+                  autocorrect="off"
+                  type="number"
+                  pattern="^[0-9]*[.,]?[0-9]*$"
+                  minlength="1"
+                  min="0"
+                  spellcheck="false"
+                  id="presale_eth_value"
+                  class="presaleBuyInputValue"
+                  placeholder="Amount in ETH"
+                />
+              </div>
+              <div class="presaleBuyInputlogo">
+                <img
+                  src="./assets/ethereumLogo.svg"
+                  alt="Eth"
+                  height="40"
+                  width="40"
+                />
+              </div>
+            </div>
+
+            <div class="row-container row-center">
+              <div class="center-text calculate-eth-token"></div>
+            </div>
+            <div class="row-container row-center">
+              <div class="center-text btn buy-token-from-presale">
+                Buy JKP3R
+              </div>
+            </div>
+            <!-- <div class="row-container row-center">
+              <div class="center-text msg-row"></div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </main>
     <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <div class="row-container row-center">work in progress...</div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    <!-- <div class="row-container row-center">work in progress...</div> -->
+
     <footer>
       <div class="row-container row-center">
         This project is in beta. Use at your own risk. <br />
@@ -139,42 +268,52 @@
             </a>
           </h4>
         </div>
+        <div></div>
         <div class="community">
           <a
             class="social-link-mobile-a"
             href="https://github.com/jobkeep3r"
             target="_blank"
-          >
-            Github</a
-          >
+            ><i class="fab fa-github"></i>
+          </a>
           <a
             class="social-link-mobile-a"
             href="https://twitter.com/jobkeep3r"
             target="_blank"
-          >
-            Twitter</a
-          >
+            ><i class="fab fa-twitter"></i>
+          </a>
           <a
             class="social-link-mobile-a"
             href="https://medium.com/@jobkeep3r"
             target="_blank"
-          >
-            Medium</a
-          >
+            ><i class="fas fa-pencil-alt"></i>
+          </a>
           <a
             class="social-link-mobile-a"
             href="https://t.me/jobkeep3r"
             target="_blank"
-            >Telegram</a
-          >
+            ><i class="fab fa-telegram"></i
+          ></a>
         </div>
       </div>
     </footer>
+    <div class="trans-popup">
+      <div class="row-container popup-panel">
+        <div class="popupCloseButton">x</div>
+        <div class="popup-header"></div>
+        <hr class="hr-line" />
+        <div class="popup-body"></div>
+        <div class="loader"></div>
+        <div class="btn TransPopupAction"></div>
+      </div>
+    </div>
     <script src="./assets/jquery.min.js"></script>
     <script src="./assets/web3.min.js"></script>
-    <script src="./assets/constants/index.js?v=1.01"></script>
-    <script src="./assets/connector/index.js?v=1.01"></script>
-    <script src="./assets/app.js?v=1.01"></script>
-    <script src="./assets/main.js?v=1.01"></script>
+    <script src="./assets/constants/index.js?v=1.04"></script>
+    <script src="./assets/connector/index.js?v=1.04"></script>
+    <script src="./assets/contracts/index.js?v=1.04"></script>
+    <script src="./assets/controls/index.js?v=1.04"></script>
+    <script src="./assets/app.js?v=1.04"></script>
+    <script src="./assets/main.js?v=1.04"></script>
   </body>
 </html>

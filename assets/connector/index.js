@@ -31,7 +31,7 @@ connectwallet = async () => {
           }
         } else console.error(error);
       });
-      net = await web3.eth.net.getNetworkType();
+      chainId = await web3.eth.net.getNetworkType();
     } catch {}
   } else {
   }
@@ -43,6 +43,39 @@ copyAddress = () => {
   $temp.val(currentAccount).select();
   document.execCommand("copy");
   $temp.remove();
+};
+
+walletUpdate = async () => {
+  try {
+    if (currentAccount != undefined) {
+      isConnected = true;
+      $(".wallet-btn").hide();
+      $(".wallet-btn-connected").show();
+
+      $("#currentAccountClass").text(
+        `${currentAccount.slice(0, 7)}...${currentAccount.slice(
+          currentAccount.length - 5,
+          currentAccount.length
+        )}`
+      );
+
+      $(".VeiwLink").attr(
+        "href",
+        `http://etherscan.io/address/${currentAccount}`
+      );
+
+      //   var str = "2547898.32585";
+      //   var res = str.split(".");
+      $(".isConnected").html(
+        ` <i class="fas fa-circle icon-color">&nbsp;</i>Connected`
+      );
+    } else {
+      $(".wallet-btn").show();
+      $(".wallet-btn-connected").hide();
+    }
+  } catch {
+    alert("please install Metamask");
+  }
 };
 
 if (window.ethereum) {

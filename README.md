@@ -5,7 +5,6 @@
 Jobkeep3r Network is designed as a decentralized coordination ecosystem for projects to find Keepers that will help with their upkeep.
 
 <img src="./assets/Screenshot.png" data-canonical-src="./assets/Screenshot.png" />
-<!-- <img src="./assets/Screenshot.png" data-canonical-src="./img/PUMPONOMICS.png" width="512" height="512" /> -->
 
 # What are Jobs?
 

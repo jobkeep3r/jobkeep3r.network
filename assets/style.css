@@ -508,3 +508,29 @@ p {
     transform: rotate(360deg);
   }
 }
+
+.input-value-isKeeper {
+  /* max-width: 95%; */
+}
+.isKeeper_search_submit {
+  padding: 10px 5px 10px 10px;
+  cursor: pointer;
+  color: #333333bf;
+}
+.isKeeper_search_submit:hover {
+  background-color: rgba(var(--bg-shade-three-rgb), 0.05);
+  border-radius: 25px;
+  color: var(--bg-shade-three);
+}
+
+.presaleBuyInputContainer:hover {
+  border: 2px solid var(--bg-shade-three);
+}
+
+.if-Activate-Time-done,
+.if-Activate-Time-Pending,
+.bondActivation-Panel,
+.bondActivation-Panel-btn,
+.isKeeperPanel {
+  display: none;
+}

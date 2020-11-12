@@ -34,7 +34,7 @@
       integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./assets/style.css?v=1.04" />
+    <link rel="stylesheet" href="./assets/style.css?v=1.05" />
   </head>
   <body>
     <header class="header">
@@ -112,7 +112,7 @@
                 </div>
                 <div class="row-container row-space-between">
                   <div class="left-text">Bond:</div>
-                  <div class="right-text">0 JKP3R</div>
+                  <div class="right-text BondBalance">0 JKP3R</div>
                 </div>
                 <div class="row-container row-space-between isbonddisable">
                   <div class="right-text btn bondEnable">Bond</div>
@@ -152,10 +152,54 @@
                 <div class="input-submit-cancel btn right-text">Cancel</div>
                 <div class="input-submit-bond btn right-text">Submit</div>
               </div>
+
+              <div class="bondActivation-Panel row-container row-space-between">
+                <div class="left-text">Bonds Pending:</div>
+                <div class="right-text pendingBondsValue"></div>
+              </div>
+              <div class="bondActivation-Panel-btn if-Activate-Time-done">
+                <div class="activate-bond btn center-text">Activate</div>
+              </div>
+              <div
+                class="bondActivation-Panel-btn if-Activate-Time-Pending row-container row-space-between"
+              >
+                <div class="Pending-activate-bond-time left-text">
+                  Activatable at:
+                </div>
+                <div class="right-text pending-activate-bond-time-Value"></div>
+              </div>
+
               <div class="row-container row-space-between">
                 <div class="left-text">Work Completed:</div>
-                <div class="right-text">0</div>
+                <div class="right-text workCompletedValue">0</div>
               </div>
+
+              <div class="isKeeperPanel row-container row-space-between">
+                <div class="left-text">First Seen:</div>
+                <div class="right-text firstSeenTime"></div>
+              </div>
+              <div class="isKeeperPanel row-container row-space-between">
+                <div class="left-text">Last Seen:</div>
+                <div class="right-text lastSeenTime"></div>
+              </div>
+
+              <div class="row-container presaleBuyInputContainer">
+                <div>
+                  <div class="presaleBuyInputName">
+                    <div>Find Keeper:</div>
+                  </div>
+                  <input
+                    autocorrect="off"
+                    id="input-value-isKeeper"
+                    class="input-value-isKeeper"
+                    placeholder="0x......"
+                  />
+                </div>
+                <div class="isKeeper_search_submit">
+                  <i class="fas fa-search"></i>
+                </div>
+              </div>
+
               <!-- </div> -->
             </div>
           </div>
@@ -309,11 +353,12 @@
     </div>
     <script src="./assets/jquery.min.js"></script>
     <script src="./assets/web3.min.js"></script>
-    <script src="./assets/constants/index.js?v=1.04"></script>
-    <script src="./assets/connector/index.js?v=1.04"></script>
-    <script src="./assets/contracts/index.js?v=1.04"></script>
-    <script src="./assets/controls/index.js?v=1.04"></script>
-    <script src="./assets/app.js?v=1.04"></script>
-    <script src="./assets/main.js?v=1.041"></script>
+    <script src="./assets/utils/index.js?v=1.05"></script>
+    <script src="./assets/constants/index.js?v=1.05"></script>
+    <script src="./assets/connector/index.js?v=1.05"></script>
+    <script src="./assets/contracts/index.js?v=1.05"></script>
+    <script src="./assets/controls/index.js?v=1.05"></script>
+    <script src="./assets/app.js?v=1.05"></script>
+    <script src="./assets/main.js?v=1.05"></script>
   </body>
 </html>

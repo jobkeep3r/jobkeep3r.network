@@ -36,12 +36,6 @@ $("#presale_eth_value").on("input", () => {
 });
 
 window.addEventListener("load", function () {
-  // $(".trigger_popup_fricc").click(function () {
-  //   $(".hover_bkgr_fricc").show();
-  // });
-  // $(".hover_bkgr_fricc").click(function () {
-  //   $(".hover_bkgr_fricc").hide();
-  // });
   $(".popupCloseButton").click(function () {
     $(".trans-popup").hide();
   });
@@ -68,6 +62,8 @@ $(".input-submit-cancel").click(() => {
   $(".input-value-bond").val("");
 });
 
-// $(".bondEnable").click(addBond);
-// $(".unbondEnable").click(addUnbond);
-$(".input-submit-bond").click(addUnbond);
+$(".input-submit-bond").click(bondUnbondCall);
+
+$(".activate-bond").click(activatePendingBond);
+
+$(".isKeeper_search_submit").click(searchKeeperDetails);

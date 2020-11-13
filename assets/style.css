@@ -92,6 +92,7 @@ p {
   align-items: center;
   font-weight: 500;
   flex-wrap: wrap;
+  padding: 0 20px;
 }
 
 .icon-color {
@@ -124,6 +125,13 @@ p {
 .logo {
   padding: 10px 0;
   margin: 10px 0 0 20px;
+  color: var(--text-black);
+  font-weight: bold;
+}
+.logo-footer {
+  display: inline;
+  padding: 10px 0;
+  margin: 0;
   color: var(--text-black);
   font-weight: bold;
 }
@@ -533,4 +541,54 @@ p {
 .bondActivation-Panel-btn,
 .isKeeperPanel {
   display: none;
+}
+.margingap {
+  margin: 0;
+}
+.margingap > * {
+  margin: 10px;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    width: 100vw;
+  }
+  .nav {
+    flex-direction: column;
+    flex-wrap: unset;
+    width: 100vw;
+    height: 140px;
+  }
+  .nav ul li {
+    padding: 10px;
+    margin: 10px 10px;
+  }
+  .bottom-nav {
+    height: 150px;
+  }
+  .row-container-mb {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap !important;
+  }
+  .row-center-no-margin {
+    margin: auto;
+    margin-bottom: 50px;
+  }
+  .presaleBuyInputContainer {
+    margin: 10px 5px;
+    flex-wrap: nowrap;
+  }
+
+  .copyright {
+    margin-bottom: 15px;
+  }
+
+  .community a {
+    padding: 10px;
+    margin: 5px 10px 5px 10px;
+  }
 }

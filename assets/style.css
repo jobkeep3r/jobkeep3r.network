@@ -305,6 +305,7 @@ p {
 .community {
   display: flex;
   flex-wrap: wrap;
+  color: var(--bg-shade-one);
 }
 .community a {
   padding: 0 5px 0 5px;

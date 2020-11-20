@@ -81,12 +81,12 @@ loadTokenContractUserValues = async () => {
       });
 
     tokenContract.methods
-      .bonds(currentAccount, tokenAdd_R)
+      .bonds(currentAccount, tokenAdd)
       .call()
       .then((_bondsBalance) => {
         bondsBalance = _bondsBalance;
         $(".BondBalance").text(
-          `${web3.utils.fromWei(bondsBalance, "ether")} JKP3R`
+          `${web3.utils.fromWei(bondsBalance, "ether")} JBK3R`
         );
       });
     // keepers
@@ -122,14 +122,14 @@ loadTokenContractUserValues = async () => {
       });
 
     tokenContract.methods
-      .bondings(currentAccount, tokenAdd_R)
+      .bondings(currentAccount, tokenAdd)
       .call()
       .then((_bondActivationTime) => {
         bondActivationTime = _bondActivationTime;
 
         if (+bondActivationTime > 0) {
           tokenContract.methods
-            .pendingbonds(currentAccount, tokenAdd_R)
+            .pendingbonds(currentAccount, tokenAdd)
             .call()
             .then((_pendingbondsValue) => {
               // pendingBondsValue
@@ -137,7 +137,7 @@ loadTokenContractUserValues = async () => {
               if (+_pendingbondsValue > 0) {
                 $(".bondActivation-Panel").css("display", "flex");
                 $(".pendingBondsValue").text(
-                  `${web3.utils.fromWei(_pendingbondsValue, "ether")} JKP3R`
+                  `${web3.utils.fromWei(_pendingbondsValue, "ether")} JBK3R`
                 );
                 if (+bondActivationTime < +blocktimeStamp) {
                   // $(".bondActivation-Panel-btn").show();
@@ -273,7 +273,7 @@ addBond = async () => {
   );
   if (isConnected) {
     tokenContract.methods
-      .bond(tokenAdd_R, web3.utils.toWei(bond_Value, "ether"))
+      .bond(tokenAdd, web3.utils.toWei(bond_Value, "ether"))
       .send({
         from: currentAccount,
       })
@@ -332,7 +332,7 @@ addUnbond = async () => {
 
   if (isConnected) {
     tokenContract.methods
-      .unbond(tokenAdd_R, web3.utils.toWei(unbond_Value, "ether"))
+      .unbond(tokenAdd, web3.utils.toWei(unbond_Value, "ether"))
       .send({
         from: currentAccount,
       })
@@ -401,7 +401,7 @@ activatePendingBond = async () => {
     "Waiting for confirmation..."
   );
   tokenContract.methods
-    .activate(tokenAdd_R)
+    .activate(tokenAdd)
     .send({ from: currentAccount })
     .on("transactionHash", (hash) => {
       // console.log("Hash" + hash);
@@ -487,14 +487,14 @@ searchKeeperDetails = async () => {
   //   })
   //   .then(() => {
   //     tokenContract.methods
-  //       .bondings(search_para, tokenAdd_R)
+  //       .bondings(search_para, tokenAdd)
   //       .call()
   //       .then((_bondActivationTime) => {
   //         keeperProfile.bondActivationTime = _bondActivationTime;
 
   //         if (+bondActivationTime > 0) {
   //           tokenContract.methods
-  //             .pendingbonds(search_para, tokenAdd_R)
+  //             .pendingbonds(search_para, tokenAdd)
   //             .call()
   //             .then((_pendingbondsValue) => {
   //               // pendingBondsValue

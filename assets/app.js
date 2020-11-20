@@ -19,8 +19,8 @@ appReload = () => {
         chainId = await web3.eth.net.getNetworkType();
       }
       if (chainId == "main" && isEthereum) {
-        // tokenContract = await JobKeep3rContact(tokenABI, tokenAdd);
-        // presaleContract = await JobKeep3rContact(presaleABI, presaleAdd);
+        tokenContract = await JobKeep3rContact(tokenABI, tokenAdd);
+        presaleContract = await JobKeep3rContact(presaleABI, presaleAdd);
       } else if (chainId == "ropsten" && isEthereum) {
         msgPopupControl(
           "show",
@@ -45,10 +45,10 @@ appReload = () => {
     })
     .then(async () => {
       if (isEthereum) {
-        // await loadTokenContractDefaultValues();
-        // await loadPresaleContractDefaultValues();
+        await loadTokenContractDefaultValues();
+        await loadPresaleContractDefaultValues();
       }
     })
-    .then(getBlockNoAndDetails);
-  // .then(loadTokenContractUserValues);
+    .then(getBlockNoAndDetails)
+    .then(loadTokenContractUserValues);
 };

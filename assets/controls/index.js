@@ -240,16 +240,13 @@ buyPresaleToken = async () => {
 };
 
 loadpresalevalues = () => {
-  $(".TokenForSale").text(
-    `${web3.utils.fromWei(totalSupply, "ether") / 3} ${tokenSymbol}`
-  );
+  $(".TokenForSale").text("60,000 JBK3R");
   $(".PresaleTokenRate").text(`${presale_token_Rate} ${tokenSymbol} = 1 ETH`);
-  $(".PresaleTarget").text(
-    `${web3.utils.fromWei(totalSupply, "ether") / (3 * presale_token_Rate)} ETH`
-  );
+  $(".PresaleTarget").text(`300 ETH`);
   $(".RemainingToken").text(
     `${web3.utils.fromWei(remainingBalance, "ether")} ${tokenSymbol}`
   );
+  $(".RemainingToken").text(`60,000 ${tokenSymbol}`);
 };
 
 addBond = async () => {

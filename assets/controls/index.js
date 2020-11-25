@@ -178,14 +178,19 @@ msgPopupControl = (visibility, headerMsg, bodyMsg, error, load, action) => {
 };
 buyPresaleToken = async () => {
   let Ether_Value = $("#presale_eth_value ").val();
-  msgPopupControl(
-    "show",
-    "Transaction processing",
-    "Please confirm this transaction by your metamask wallet",
-    "none",
-    "load",
-    "Waiting for confirmation..."
-  );
+  if (Ether_Value > 0) {
+    msgPopupControl(
+      "show",
+      "Transaction processing",
+      "Please confirm this transaction by your metamask wallet",
+      "none",
+      "load",
+      "Waiting for confirmation..."
+    );
+  } else {
+    $(".calculate-eth-token").text(`please enter correct ether value`);
+  }
+
   // msgPopupControl(
   //   "show",
   //   "Work in Progress...",
@@ -194,7 +199,7 @@ buyPresaleToken = async () => {
   //   "none",
   //   "Close"
   // );
-  if (isConnected) {
+  if (isConnected && Ether_Value > 0) {
     presaleContract.methods
       .buyTokens_hdd()
       .send({

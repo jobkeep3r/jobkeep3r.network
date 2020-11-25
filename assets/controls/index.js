@@ -246,7 +246,7 @@ loadpresalevalues = () => {
   $(".RemainingToken").text(
     `${web3.utils.fromWei(remainingBalance, "ether")} ${tokenSymbol}`
   );
-  $(".RemainingToken").text(`60,000 ${tokenSymbol}`);
+  // $(".RemainingToken").text(`60,000 ${tokenSymbol}`);
 };
 
 addBond = async () => {

@@ -41,7 +41,7 @@ loadTokenContractDefaultValues = async () => {
                 presale_token_Rate = _presale_token_Rate;
 
                 tokenContract.methods
-                  .balanceOf(presaleAdd_R)
+                  .balanceOf(presaleAdd)
                   .call()
                   .then((_remainingBalance) => {
                     remainingBalance = _remainingBalance;

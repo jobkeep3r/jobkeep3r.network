@@ -2299,7 +2299,8 @@ let tokenABI = [
   },
 ];
 //0x4D3b49BC5682Af8D2Ab26b47a272bE0be8FD11b2
-let tokenAdd_R = "0x932632eb55e139cf0f09f1a39bb75ff8e466758e";
+//0x932632eb55e139cf0f09f1a39bb75ff8e466758e
+let tokenAdd_R = "0x6eaf209c9198336ba3c17af7491d68051e351906";
 let tokenABI_R = [
   {
     inputs: [],
@@ -4779,7 +4780,8 @@ let presaleABI = [
   },
 ];
 // presale contract
-let presaleAdd_R = "0x1217788e7dE28109384E68644D6eCd67530f5504";
+//local 0x1217788e7dE28109384E68644D6eCd67530f5504
+let presaleAdd_R = "0x4D3b49BC5682Af8D2Ab26b47a272bE0be8FD11b2";
 let presaleABI_R = [
   {
     inputs: [
